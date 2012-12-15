@@ -11,7 +11,7 @@ public class CrosshairScript : MonoBehaviour {
 		Screen.showCursor = false;
 	
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 	
