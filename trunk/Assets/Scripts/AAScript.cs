@@ -21,8 +21,7 @@ public class AAScript : MonoBehaviour {
 		Vector3 fwd = transform.TransformDirection (Vector3.up);
 		
 		if (Physics.Raycast(transform.position, fwd, 10)){  
-			print("There is something in front of the object!");
-					
+						
 			 if(Time.time > interval + lastShot){
        			Rigidbody clone = Instantiate(bullet, transform.position,transform.rotation) as Rigidbody;
 			 	//instance.AddForce(fwd * power);
