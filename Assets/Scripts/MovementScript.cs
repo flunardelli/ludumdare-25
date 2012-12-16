@@ -15,9 +15,10 @@ public class MovementScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-		y =  Input.GetAxis("Vertical")* Time.deltaTime * speed;
+		//y =  Input.GetAxis("Vertical")* Time.deltaTime * speed;
 		x = Input.GetAxis("Horizontal")*Time.deltaTime*speed;
 		
-		transform.Translate(x, y, 0);
+		transform.Translate(x, -0.01f, 0);
+		
 	}
 }
