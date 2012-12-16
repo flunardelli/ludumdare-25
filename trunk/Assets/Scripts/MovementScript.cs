@@ -19,6 +19,5 @@ public class MovementScript : MonoBehaviour {
 		x = Input.GetAxis("Horizontal")*Time.deltaTime*speed;
 		
 		transform.Translate(x, y, 0);
-	
 	}
 }
