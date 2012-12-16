@@ -16,8 +16,8 @@ public class BulletScript : MonoBehaviour {
 	}
 	
 	void OnTriggerEnter(Collider hit) { 
-		Debug.Log("Collider hit: " + hit.gameObject.tag);
-		if(hit.gameObject.tag == "Building") {
+		//Debug.Log("Collider hit: " + hit.gameObject.tag);
+		if(hit.gameObject.tag == "Player") {
 			audio.PlayOneShot(explosion);
 			Destroy(hit.gameObject);
 			
