@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 15a43356234d2b04a8accc88c7796634
+guid: 4b67cf5cad97ec0468dcf0ec9969710d
 ModelImporter:
   serializedVersion: 15
   fileIDToRecycleName:
@@ -25,7 +25,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .00999999978
+    globalScale: .100000001
     meshCompression: 0
     addColliders: 0
     swapUVChannels: 0
