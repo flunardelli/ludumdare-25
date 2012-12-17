@@ -6,8 +6,10 @@ public class HUD : MonoBehaviour {
 	GUIStyle style;
 	public Font font;
 	
+	public int fase;
+	
 	int ships = 12;
-	private float meters = 0f;
+	public float meters = 0f;
 	enum state {Game, GameOver, Complete};
 	
 	state currentState;
@@ -64,7 +66,13 @@ public class HUD : MonoBehaviour {
 				GUILayout.FlexibleSpace();
 					GUILayout.Label("Game Over",style);			
 						if (GUI.Button(new Rect(Screen.width/2 - 200 / 2, Screen.height /2  + 150 /2, 200,50),"Try again")){
-				            Application.LoadLevel("scene1");
+				            if(fase == 1){
+					            Application.LoadLevel("scene1");
+							}else if(fase == 2){
+						        Application.LoadLevel("scene2");
+							}else if(fase == 3){
+						        Application.LoadLevel("scene3");
+							}
 				        }
 				GUILayout.FlexibleSpace();
 			GUILayout.EndVertical();
@@ -76,10 +84,21 @@ public class HUD : MonoBehaviour {
 			GUILayout.FlexibleSpace();	
 			GUILayout.BeginVertical();
 				GUILayout.FlexibleSpace();
-					GUILayout.Label("Invasion Complete",style);			
-						if (GUI.Button(new Rect(Screen.width/2 - 200 / 2, Screen.height /2  + 150 /2, 200,50),"Play again")){
-				            Application.LoadLevel("scene1");
-				        }
+					GUILayout.Label("Invasion Complete",style);
+						if(fase == 1){
+							if (GUI.Button(new Rect(Screen.width/2 - 200 / 2, Screen.height /2  + 150 /2, 200,50),"Play next")){
+					            Application.LoadLevel("scene2");
+					        }
+						}else if(fase == 2){
+							if (GUI.Button(new Rect(Screen.width/2 - 200 / 2, Screen.height /2  + 150 /2, 200,50),"Play next")){
+					            Application.LoadLevel("scene3");
+					        }
+						}else if(fase == 3){
+							if (GUI.Button(new Rect(Screen.width/2 - 200 / 2, Screen.height /2  + 150 /2, 200,50),"You Win!!!")){
+					            Application.LoadLevel("scene4");
+					        }
+						}
+			
 				GUILayout.FlexibleSpace();
 			GUILayout.EndVertical();
 

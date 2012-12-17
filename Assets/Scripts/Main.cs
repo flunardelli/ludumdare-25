@@ -21,7 +21,7 @@ public class Main : MonoBehaviour {
 		timer += Time.deltaTime;
 		
 		if(Input.anyKeyDown) {
-			Application.LoadLevel ("scene1");
+			Application.LoadLevel ("Controles");
 		}
 	}
 	
