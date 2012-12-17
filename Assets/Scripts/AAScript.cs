@@ -3,7 +3,7 @@ using System.Collections;
 
 public class AAScript : MonoBehaviour {
 	
-	public Transform target;
+	//public Transform target;
 	public Rigidbody bullet;
 	public float power = 3000;
 	public float interval = 0.5f;
@@ -16,14 +16,12 @@ public class AAScript : MonoBehaviour {
 	public float velocity = 1;
 	// Use this for initialization
 	void Start () {
-		if(target != null){
-			target = GameObject.FindWithTag("Player").transform; 
-		}
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(target != null){
+		//if(target != null){
 		m_interval = Random.Range(interval/2, interval);
 		m_power = Random.Range(power/2, power);	
 		
@@ -42,6 +40,7 @@ public class AAScript : MonoBehaviour {
 				}
     		}
 		}
-		}
+			Debug.DrawRay(transform.position, fwd*100, Color.green);
+		//}
 	}
 }
