@@ -20,6 +20,6 @@ public class ShootScript : MonoBehaviour {
 			//clone.velocity -= transform.up * power;
 			//Destroy(clone.gameObject,2);			
 			m_timer = staytimer;
-		}		
+		}	
 	}
 }
