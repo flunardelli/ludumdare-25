@@ -21,7 +21,7 @@ public class End : MonoBehaviour {
 		timer += Time.deltaTime;
 		
 		if(Input.anyKeyDown) {
-			Application.LoadLevel ("Main");
+			Application.LoadLevel ("Credits");
 		}
 	}
 	

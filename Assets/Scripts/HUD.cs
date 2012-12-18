@@ -8,6 +8,8 @@ public class HUD : MonoBehaviour {
 	
 	public int fase;
 	
+	public AudioClip song;
+	
 	int ships = 12;
 	public float meters = 0f;
 	enum state {Game, GameOver, Complete};
@@ -27,18 +29,19 @@ public class HUD : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		meters = transform.position.y * 2;
+		Debug.Log (meters);
 		ships = GameObject.FindGameObjectsWithTag("Player").Length;	
 		if (ships > 0){
 		//	Debug.Log ("Game On !");
-			if (meters < 1.7) {
+			if (meters < 1.70000f && meters > 1.69000f) { //1.7
 				Debug.Log ("invasion complete");
+				audio.PlayOneShot(song);
 				currentState = state.Complete;
 			}
 		} else{
 			currentState = state.GameOver;
 		}
-	}
-	
+	}	
 	
 	void OnGUI () {
 		//GUILayout.BeginArea (new Rect (0,0,Screen.width,Screen.height));
@@ -64,7 +67,8 @@ public class HUD : MonoBehaviour {
 			GUILayout.FlexibleSpace();	
 			GUILayout.BeginVertical();
 				GUILayout.FlexibleSpace();
-					GUILayout.Label("Game Over",style);			
+					GUILayout.Label("Game Over",style);	
+					
 						if (GUI.Button(new Rect(Screen.width/2 - 200 / 2, Screen.height /2  + 150 /2, 200,50),"Try again")){
 				            if(fase == 1){
 					            Application.LoadLevel("scene1");
