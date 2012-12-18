@@ -40,13 +40,13 @@ public class Main : MonoBehaviour {
 		
 			GUILayout.BeginArea (new Rect (0,0,Screen.width,Screen.height));
 			GUILayout.BeginVertical();	
-			GUILayout.Space (60);
+			GUILayout.Space (100);
 			GUILayout.BeginHorizontal();
 				GUILayout.FlexibleSpace();								
-					GUILayout.Label(MainLogoTexture,GUILayout.Width(377),GUILayout.Height(58));								
+					GUILayout.Label(MainLogoTexture,GUILayout.Width(800),GUILayout.Height(200));								
 				GUILayout.FlexibleSpace();
 			GUILayout.EndHorizontal();
-			GUILayout.Space (360);
+			GUILayout.Space (200);
 			if(timer <= 2) {	
 				GUILayout.BeginHorizontal();
 					GUILayout.FlexibleSpace();										
